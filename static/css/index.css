@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+:root{
+    --quote-font-family: "Courgette";
+}
+
+.block-content{
+    position: relative;
+}
+
+.show-success-feedback-message{
+    padding: 20px;
+    font-size: 25px;
+    color: whitesmoke;
+    background-color: rgb(0, 207, 0);
+}
+
+.quote{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote p{
+    width: 50%;
+    font-size: 45px;
+    color: #ECF9FF;
+    padding-top: 50px;
+    text-align: center;
+    font-family: var(--quote-font-family);
+}
+
+.quote img{
+    width: 100%;
+    margin-top: 2%;
+}
+
+.welcome{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome img{
+    width: 50%;
+}
+
+.welcome p{
+    width: 50%;
+    padding: 20px;
+    font-size: 25px;
+    color: #ECF9FF;
+    text-align: justify;
+    font-family: var(--global-font);
+}
+
+.contact{
+    gap: 5px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#contact-image{
+    width: 75%;
+}
+
+.contact-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-left p{
+    display: none;
+    font-family: var(--global-font);
+}
+
+.contact-right{
+    width: 50%;
+}
+
+form{
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-item input::placeholder{
+    color: #bed7e7;
+}
+
+.contact-form-item input,
+textarea{
+    width: 80%;
+    padding: 10px;
+    outline: none;
+    color: white;
+    background: transparent;
+    border: 1px solid #bed7e7;
+    font-family: var(--global-font);
+}
+
+textarea{
+    resize: none;
+}
+
+.contact-form-item input::placeholder,
+textarea::placeholder{
+    color: #bed7e7;
+}
+
+.contact-form-item input:focus,
+textarea:focus{
+    color: white;
+    border-color: white;
+}
+
+.contact-form-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.error{
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;;
+}
+
+.send-msg{
+    width: 30%;
+    outline: none;
+    padding: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    .quote p{
+        width: 70%;
+        font-size: 30px;
+    }
+
+    .welcome{
+        flex-direction: column;
+    }
+
+    .welcome p{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .welcome img{
+        width: 90%;
+        height: 100%;
+    }
+
+    .contact{
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-left{
+        width: 100%;
+    }
+
+    .contact-right{
+        width: 90%;
+    }
+
+    .contact img{
+        display: none;
+    }
+
+    .contact-left p{
+        width: 90%;
+        display: block;
+        font-size: 30px;
+        color: rgb(236, 236, 236);
+        padding: 10px 10px 10px 0;
+    }
+
+    .contact-right form input,
+    .contact-right form textarea{
+        width: 100%;
+    }
+
+    .error{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,38 @@
+.inner-wrapper{
+    height: 180px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.inner-wrapper-top p{
+    word-wrap: break-word;
+    font-family: var(--global-font);
+}
+
+.inner-wrapper-bottom{
+    display: flex;
+}
+
+.inner-wrapper-right{
+    justify-content: flex-end;
+}
+
+.user-email{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user-gender,
+.user-admin,
+.user-active{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.inner-wrapper-right{
+    margin-top: 10px;
+}
+
+.success-message-div{
+    width: 93%
+}

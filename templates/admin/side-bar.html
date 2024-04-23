@@ -1,0 +1,83 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/admin/side-bar.css' %}">
+
+<div class="side-bar">
+    {% if template_type == 'template::users' or template_type == 'template::edit-user' %}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'user-details' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'user-details' %}">
+
+    {% endif %}
+        <i class='bx bx-group'></i>
+        <p class="side-bar-items">Users</p>
+    </a>
+
+    {% if template_type == 'template::exams' %}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'users-exams' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'users-exams' %}">
+
+    {% endif %}
+        <i class='bx bx-edit-alt'></i>
+        <p class="side-bar-items">Exams</p>
+    </a>
+
+    {% if template_type == 'template::programmes' %}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getProgrammeDetails' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'getProgrammeDetails' %}">
+
+    {% endif %}
+        <i class='bx bx-library'></i>
+        <p class="side-bar-items">Programme</p>
+    </a>
+
+    {% if template_type == 'template::subjects' or template_type == 'template::edit-subject'%}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'subject-programmes-details' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'subject-programmes-details' %}">
+
+    {% endif %}
+        <i class='bx bxs-book-alt'></i>
+        <p class="side-bar-items">Subject</p>
+    </a>
+
+    {% if template_type == 'template::questions' or template_type == 'template::edit-question' or template_type == 'template::add-new-question' %}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'questions-programmes' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'questions-programmes' %}">
+
+    {% endif %}
+        <i class='bx bx-data'></i>
+        <p class="side-bar-items">Questions</p>
+    </a>
+
+    {% if template_type == 'template::reports' or template_type == 'template::edit-reports' %}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'report-lists' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'report-lists' %}">
+
+    {% endif %}
+        <i class='bx bxs-flag-alt'></i>
+        <p class="side-bar-items">Report</p>
+    </a>
+
+    {% if template_type == 'template::feedbacks' or template_type == 'template::edit-feedbacks' %}
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'feedback' %}">
+
+    {% else %}
+        <a class="side-bar-option" href="{% url 'feedback' %}">
+
+    {% endif %}
+        <i class='bx bx-comment-detail'></i>
+        <p class="side-bar-items">FeedBack</p>
+    </a>
+
+</div>

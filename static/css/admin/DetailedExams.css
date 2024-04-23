@@ -1,0 +1,42 @@
+.inner-wrapper{
+    flex-direction: column;
+}
+
+.inner-wrapper-bottom{
+    display: flex;
+}
+
+.inner-wrapper-left{
+    gap: 0;
+}
+
+.inner-wrapper-right{
+    flex-direction: column;
+    padding-left: 120px;
+}
+
+.inner-wrapper-right p{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.inner-wrapper-right p:nth-child(2){
+    border-top: 2px solid black;
+}
+
+.exam-user{
+    font-size: 17px;
+    font-weight: 600;
+    word-break: break-word;
+    font-family: var(--global-font);
+}
+
+.exam-programme{
+    font-weight: 200;
+    font-size: small;
+}
+
+.exam-date{
+    font-weight: 200;
+    font-size: smaller;
+}

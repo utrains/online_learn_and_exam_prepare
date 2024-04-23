@@ -1,0 +1,27 @@
+.wrapper{
+    margin-bottom: 10px;
+}
+
+.inner-wrapper-left{
+    width: 50%;
+}
+
+.inner-wrapper-right{
+    gap: 5px;
+    flex-direction: column;
+}
+
+.inner-wrapper-left p{
+    font-weight: 200;
+}
+
+.inner-wrapper-right p{
+    font-size: large;
+    font-weight: 200;
+    font-family: var(--global-font);
+}
+
+.inner-wrapper-left p
+.inner-wrapper{
+    height: 100px;
+}

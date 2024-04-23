@@ -1,0 +1,60 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="input-groups">
+        <form action="#" method="POST">
+            {% csrf_token %}
+
+            {% include 'success-message.html' %}
+
+            {% for key, value in data.0.items %}
+                {% if key != 'IsMarked' %}
+                    {% if key == 'Message' %}
+                        <div class="row">
+                            <div class="row-left-container">
+                                <label for="{{key}}">{{key}}</label>
+                            </div>
+
+                            <div class="row-right-container">
+                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
+                                <small class="{{key}}-error"></small>
+                            </div>
+                        </div>
+
+                    {% elif key == 'ID' %}
+                        <div class="row id-row">
+                            <p>{{value}}</p>
+                        </div>
+
+                    {% else %}
+                        <div class="row">
+                            <div class="row-left-container">
+                                <label for="{{key}}">{{key}}</label>
+                            </div>
+
+                            <div class="row-right-container">
+                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+                                <small class="{{key}}-error"></small>
+                            </div>
+                        </div>
+
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <div class="buttons">
+                {% if data.0.IsMarked %}
+                    <a href="#" class="marked-as-read">Marked</a>
+
+                {% else %}
+                    <a href="{% url 'mark-feedback' data.0.ID %}" class="mark-as-read">Mark As Read</a>
+
+                {% endif %}
+
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

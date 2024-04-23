@@ -1,0 +1,171 @@
+.block-content{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#rank-by-form{
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rank-system-info{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: #22978d;
+}
+
+.rank-system-message{
+    width: 95%;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-family: var(--global-font);
+}
+
+.bx-x{
+    width: 5%;
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+#rank-by{
+    width: 50%;
+    padding: 10px;
+    outline: none;
+}
+
+.leaderboard-users{
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rank-number{
+    width: 10%;
+    display: flex;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    justify-content: center;
+}
+
+.medals{
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.users{
+    width: 80%;
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #227a97
+}
+
+.user-details{
+    gap: 30px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.user-name{
+    width: 50%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: whitesmoke;
+    font-family: var(--global-font);
+}
+
+.user-profile-image{
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-score{
+    width: 10%;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.no-data{
+    width: 80%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: xx-large;
+    font-family: var(--global-font);
+}
+
+.block-content{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px){
+    #rank-by-form{
+        width: 100%;
+        padding: 20px;
+    }
+
+    #rank-by{
+        width: 80%;
+    }
+
+    .no-data{
+        font-size: x-large;
+    }
+
+    .medals,
+    .user-profile-image{
+        width: 40px;
+        height: 40px;
+    }
+
+    .rank-system-info {
+        width: 90%;
+    }
+
+    .rank-system-message {
+        width: 90%;
+    }
+
+    .bx-x{
+        width: 0;
+    }
+
+    .users{
+        gap: 0;
+        width: 90%;
+    }
+
+    .user-details{
+        gap: 10px;
+    }
+
+    p.rank-system-message,
+    p.user-name,
+    p.user-score,
+    p.user-rank{
+        font-size: 1rem;
+    }
+}

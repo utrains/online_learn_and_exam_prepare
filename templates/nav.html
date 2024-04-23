@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{page_title}}</title>
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+        <link rel="stylesheet" href="{% static 'css/success-message.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href='{% static "logo2.png" %}' type="image/icon type">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="{% url 'index' %}">
+                        <span id="title">Online Entrance Preparation</span>
+                    </a>
+                </div>
+
+                <div class="right-panel">
+                    {% if request.user.is_superuser is False %}
+                        <a href="{% url 'program-selector' %}" id="take-test">Take a Test</a>
+                    {% endif %}
+
+                    {% if request.user.is_authenticated %}
+                        <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
+
+                    {% else %}
+                        {% if request.user.is_superuser is False %}
+                            <a href="{% url 'login' %}" id="login">Login</a>
+                        {% endif %}
+
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="block-content">
+                {% include 'DetachedMenu.html' %}
+
+                {% block content %}
+                {% endblock %}
+            </div>
+
+            {% include 'footer.html' %}
+
+            <script src="{% static 'js/nav.js' %}"></script>
+    </body>
+</html>

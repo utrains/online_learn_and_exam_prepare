@@ -1,0 +1,35 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/admin/jump-to-page.css' %}">
+
+
+{% if paginator.num_pages > 1 %}
+    <div class="jump-to-page">
+
+    {% if prev_page_index == 0 %}
+        <a href="#" class="prev-page-link readonly-link">
+
+    {% else %}
+        <a href="?pages={{prev_page_index}}" class="prev-page-link">
+
+    {% endif %}
+        <i class='bx bx-left-arrow-alt' ></i>
+        <p>Previous</p>
+    </a>
+
+    {% if next_page_index > paginator.num_pages %}
+        <a href="#" class="next-page-link readonly-link">
+
+    {% else %}
+        <a href="?pages={{next_page_index}}" class="next-page-link">
+
+    {% endif %}
+        <p>Next</p>
+        <i class='bx bx-right-arrow-alt'></i>
+    </a>
+
+{% else %}
+    <div class="jump-to-page hide-jump-to-page">
+
+{% endif %}
+    </div>

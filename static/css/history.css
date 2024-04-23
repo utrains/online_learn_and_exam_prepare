@@ -1,0 +1,109 @@
+.block-content{
+    gap: 20px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
+    box-shadow: inset rgba(0, 0, 0, 0.61) 0px 3px 8px;
+}
+
+.history{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgb(1, 134, 79);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.marks-left-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.marks-right-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.obtained-marks{
+    cursor: default;
+    font-size: 25px;
+    font-weight: 800;
+    color: whitesmoke;
+    font-family: var(--global-font);
+}
+
+.total-marks{
+    cursor: default;
+    font-size: 25px;
+    color: whitesmoke;
+    font-family: var(--global-font);
+    border-top: 2px solid whitesmoke;
+}
+
+#programme,
+#date{
+    padding: 5px;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.history:hover{
+    box-shadow: rgb(0, 73, 43) 0px -50px 36px -28px inset;
+}
+
+.no-records{
+    width: 100%;
+    display: flex;
+    font-size: 40px;
+    cursor: default;
+    min-height: 80vh;
+    align-items: center;
+    font-weight: bolder;
+    justify-content: center;
+    color: rgba(8, 0, 27, 0.692);
+}
+
+.jump-to-next-page{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.no-records{
+    font-family: var(--global-font);
+}
+
+@media screen and (max-width: 600px){
+    .each-history{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .each-history:first-child{
+        margin-top: 0px;
+    }
+
+    .history{
+        width: 80%;
+    }
+
+    .jump-to-next-page{
+        padding-top: 80px;
+    }
+
+    .no-records{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,33 @@
+.wrapper{
+    margin-top: 10px;
+}
+
+.inner-wrapper{
+    width: 30%;
+}
+
+.inner-wrapper-left{
+    width: 100%;
+    padding: 2px;
+}
+
+.inner-wrapper-left p{
+    font-weight: 200;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 600px){
+    .inner-wrapper{
+        width: 80%;
+        height: auto;
+    }
+
+    .inner-wrapper-left{
+        padding: 5px;
+    }
+
+    .container{
+        height: 100%;
+    }
+}

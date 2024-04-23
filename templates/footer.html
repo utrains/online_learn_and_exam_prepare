@@ -1,0 +1,38 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<script>
+    window.onload = function(){
+        var date = new Date();
+        year = date.getFullYear()
+
+        document.getElementById('year').innerHTML = '&copy' + year;
+    }
+</script>
+
+<div class="footer">
+    <div class="social-media-links">
+        <div class="links">
+            <a href="https://www.instagram.com/_imalunaticc/", target="_blank">
+                <i class='bx bxl-instagram-alt' ></i>
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="https://www.facebook.com/ghanteyyy" target="_blank">
+                <i class='bx bxl-facebook-circle'></i>
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="https://twitter.com/ghanteyyy" target="_blank">
+                <i class='bx bxl-twitter' ></i>
+            </a>
+        </div>
+
+    </div>
+
+    <p id="footer-year">
+        <span id="year"></span>
+    </p>
+</div>

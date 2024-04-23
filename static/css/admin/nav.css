@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;600&display=swap');
+
+:root{
+    --global-font: "Nunito";
+    --left-nav-font: "Poor Story";
+    --admin-font-family: "Rubik Vinyl";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #313866;
+}
+
+.block-content{
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.right-container{
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.left-nav a{
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    font-family: var(--admin-font-family);
+}
+
+.right-nav{
+    gap: 15px;
+    color: white;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.right-nav a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: var(--left-nav-font);
+}
+
+@media screen and (max-width: 600px){
+    .left-nav a{
+        font-size: 20px;
+    }
+
+    .right-nav a{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .block-content{
+        flex-direction: column;
+    }
+}
